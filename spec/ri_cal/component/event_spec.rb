@@ -538,6 +538,11 @@ describe RiCal::Component::Event do
       @it = RiCal::Component::Event.new(cal)
     end
 
+    it "should have a DTSTAMP with a zulu time" do
+      @it.dtstamp = date_time_with_tzinfo_zone(DateTime.parse("April 22, 2009 21:55"), "America/New_York")
+      unfold(@it.export).should match(/BEGIN:VEVENT\nDTSTAMP;VALUE=DATE-TIME:20090423T015500Z\n/)
+    end
+
     it "should cause a VTIMEZONE to be included for a dtstart with a local timezone" do
       @it.dtstart = date_time_with_tzinfo_zone(DateTime.parse("April 22, 2009 17:55"), "America/New_York")
       unfold(@it.export).should match(/BEGIN:VTIMEZONE\nTZID;X-RICAL-TZSOURCE=TZINFO:America\/New_York\n/)

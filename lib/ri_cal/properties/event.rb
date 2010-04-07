@@ -323,7 +323,7 @@ module RiCal
 
       # set the value of the DTSTAMP property
       def dtstamp=(ruby_value)
-        self.dtstamp_property= RiCal::PropertyValue::DateTime.convert(self, ruby_value)
+        self.dtstamp_property= RiCal::PropertyValue::DateTime.convert(self, ruby_value).utc
       end
 
       # return the value of the DTSTAMP property
