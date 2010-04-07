@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["author=Rick DeNatale"]
-  s.date = %q{2009-09-27}
+  s.date = %q{2010-04-07}
   s.default_executable = %q{ri_cal}
   s.description = %q{A new Ruby implementation of RFC2445 iCalendar.
 
@@ -24,7 +24,7 @@ A Google group for discussion of this library has been set up http://groups.goog
   s.rdoc_options = ["--main", "README.txt"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{ri-cal}
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{A new Ruby implementation of RFC2445 iCalendar}
 
   if s.respond_to? :specification_version then
@@ -32,17 +32,17 @@ A Google group for discussion of this library has been set up http://groups.goog
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<newgem>, [">= 1.5.2"])
+      s.add_development_dependency(%q<newgem>, [">= 1.5.3"])
       s.add_development_dependency(%q<ruby-prof>, [">= 0"])
-      s.add_development_dependency(%q<hoe>, [">= 2.3.3"])
+      s.add_development_dependency(%q<hoe>, [">= 2.6.0"])
     else
-      s.add_dependency(%q<newgem>, [">= 1.5.2"])
+      s.add_dependency(%q<newgem>, [">= 1.5.3"])
       s.add_dependency(%q<ruby-prof>, [">= 0"])
-      s.add_dependency(%q<hoe>, [">= 2.3.3"])
+      s.add_dependency(%q<hoe>, [">= 2.6.0"])
     end
   else
-    s.add_dependency(%q<newgem>, [">= 1.5.2"])
+    s.add_dependency(%q<newgem>, [">= 1.5.3"])
     s.add_dependency(%q<ruby-prof>, [">= 0"])
-    s.add_dependency(%q<hoe>, [">= 2.3.3"])
+    s.add_dependency(%q<hoe>, [">= 2.6.0"])
   end
 end
